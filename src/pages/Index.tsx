@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Code, Palette, Zap, Rocket, Briefcase, Users, Award, Coffee, Globe, Smartphone, Layout, Database } from "lucide-react";
+import { ArrowRight, Code, Palette, Zap, Rocket, Briefcase, Users, Award, Coffee, Globe, Smartphone, Layout, Database, Layers, Server, GitBranch, TestTube } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -16,37 +16,55 @@ const Index = () => {
     { icon: Palette, name: "Tailwind CSS", level: 95 },
     { icon: Zap, name: "JavaScript (ES6+)", level: 93 },
     { icon: Database, name: "GraphQL", level: 85 },
+    { icon: Layers, name: "Redux Toolkit", level: 90 },
+    { icon: Layers, name: "React Query", level: 88 },
+    { icon: Layers, name: "Context API", level: 90 },
+    { icon: Palette, name: "HTML5 & CSS3", level: 95 },
+    { icon: Server, name: "Node.js & Express.js", level: 70 },
+    { icon: Server, name: "NestJS", level: 20 },
+    { icon: Database, name: "Prisma", level: 70 },
+    { icon: Database, name: "PostgreSQL", level: 70 },
+    { icon: Database, name: "MongoDB", level: 70 },
+    { icon: Database, name: "Redis", level: 60 },
+    { icon: GitBranch, name: "Git & GitHub", level: 90 },
+    { icon: TestTube, name: "Jest", level: 75 },
+    { icon: Palette, name: "Figma & Storybook", level: 80 },
   ];
 
   const stats = [
-    { value: 3, suffix: "+", label: "Years Experience" },
+    { value: 4, suffix: "+", label: "Years Experience" },
     { value: 98, suffix: "%", label: "Cross-Browser Compatibility" },
     { value: 20, suffix: "%", label: "Performance Improvement" },
     { value: 30, suffix: "%", label: "API Response Time Reduction" },
   ];
 
-  const services = [
-    {
-      icon: Layout,
-      title: "Frontend Development",
-      description: "Building modular, responsive UI using React.js, Next.js, and Tailwind CSS. Optimizing site load speed and ensuring cross-browser compatibility.",
-    },
-    {
-      icon: Database,
-      title: "API Integration",
-      description: "Integrating headless CMS with GraphQL, RESTful APIs, and microservices. Reducing API response time and enabling dynamic content updates.",
-    },
-    {
-      icon: Zap,
-      title: "Performance Optimization",
-      description: "Conducting Lighthouse audits, implementing Core Web Vitals, code splitting, and lazy loading for optimal application performance.",
-    },
-    {
-      icon: Globe,
-      title: "Accessibility & UX",
-      description: "Ensuring 98% cross-browser compatibility, implementing accessibility best practices, and following modern UI/UX principles.",
-    },
-  ];
+ 
+const services = [
+  {
+    icon: Layout,
+    title: "Frontend Development",
+    description:
+      "Building responsive, accessible, and scalable user interfaces using React.js, Next.js, TypeScript, and Tailwind CSS. Creating reusable components, managing application state, and optimizing rendering performance.",
+  },
+  {
+    icon: Database,
+    title: "Backend Development & APIs",
+    description:
+      "Developing RESTful APIs and server-side functionality using Node.js and Express.js. Implementing authentication, role-based access control, input validation, error handling, and secure API integrations.",
+  },
+  {
+    icon: Zap,
+    title: "Database Design & Integration",
+    description:
+      "Working with PostgreSQL and MongoDB to structure data, implement CRUD operations, write efficient queries, and integrate databases with backend services. Applying pagination and indexing to improve query performance.",
+  },
+  {
+    icon: Globe,
+    title: "Performance, SEO & Accessibility",
+    description:
+      "Optimizing web applications through Lighthouse audits, Core Web Vitals, code splitting, lazy loading, and responsive design. Improving technical SEO, accessibility, and cross-browser compatibility.",
+  },
+];
 
   return (
     <div className="min-h-screen">
@@ -63,66 +81,79 @@ const Index = () => {
           <div className="absolute inset-0 bg-background/90 backdrop-blur-sm" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex-1 text-center lg:text-left"
-            >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-sm font-medium text-primary mb-4 tracking-wider uppercase"
-              >
-                React.js Developer
-              </motion.div>
-              
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent"
-              >
-                Pragatti Harchand
-              </motion.h1>
-              
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
-              >
-                Frontend Developer with <span className="text-primary font-semibold">3+ years</span> of experience building high-performance, scalable, and accessible web applications using <span className="text-primary font-semibold">React.js</span>, <span className="text-primary font-semibold">Next.js</span>, and <span className="text-primary font-semibold">TypeScript</span>
-              </motion.p>
+     
+<div className="container mx-auto px-4 relative z-10">
+  <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
+      className="flex-1 text-center lg:text-left"
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="text-sm font-medium text-primary mb-4 tracking-wider uppercase"
+      >
+        Full Stack Developer | React.js & Node.js
+      </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="flex flex-wrap gap-4 justify-center lg:justify-start"
-              >
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 shadow-[0_0_30px_rgba(0,196,255,0.3)] hover:shadow-[0_0_40px_rgba(0,196,255,0.5)] transition-all"
-                  asChild
-                >
-                  <Link to="/projects">
-                    View My Work
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/contact">Hire Me</Link>
-                </Button>
-              </motion.div>
-            </motion.div>
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent"
+      >
+        Pragatti Harchand
+      </motion.h1>
 
-            {/* Right hero visual removed as requested */}
-          </div>
-        </div>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
+      >
+        Full Stack Developer with{" "}
+        <span className="text-primary font-semibold">4+ years</span> of
+        experience building scalable, high-performance web applications.
+        Strong in{" "}
+        <span className="text-primary font-semibold">
+          React.js, Next.js, TypeScript
+        </span>{" "}
+        for frontend development and{" "}
+        <span className="text-primary font-semibold">
+          Node.js, Express.js, PostgreSQL, and MongoDB
+        </span>{" "}
+        for backend development, REST APIs, and database integration.
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+        className="flex flex-wrap gap-4 justify-center lg:justify-start"
+      >
+        <Button
+          size="lg"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 shadow-[0_0_30px_rgba(0,196,255,0.3)] hover:shadow-[0_0_40px_rgba(0,196,255,0.5)] transition-all"
+          asChild
+        >
+          <Link to="/projects">
+            View My Work
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </Button>
+
+        <Button size="lg" variant="outline" asChild>
+          <Link to="/contact">Hire Me</Link>
+        </Button>
+      </motion.div>
+    </motion.div>
+
+    {/* Right hero visual removed as requested */}
+  </div>
+</div>
 
         <motion.div
           initial={{ opacity: 0 }}

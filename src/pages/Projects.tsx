@@ -10,42 +10,65 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Agent Console - EarthLink",
-      description: "Developed a high-performance internal portal for 500+ support agents, improving task efficiency by 30% through modular UI and state optimization. Connected backend microservices (NestJS, Prisma) with the frontend React modules, enabling seamless data flow and reducing API latency by 25%. Led peer code reviews, fostering a collaborative environment and mentoring junior developers.",
-      tech: ["React.js", "NestJS", "Prisma", "TypeScript", "Microservices"],
-      category: "dashboard",
-      image: "",
-      liveUrl: "https://earthlink.net",
-    },
-    {
-      title: "Web Activation & WiFi Plan Upgrade",
-      description: "Built the activation web experience for EarthLink customers to activate new connections and upgrade WiFi plans seamlessly. Implemented secure form flows, validation, and integration with backend services to provision and update plans in real time.",
-      tech: ["React.js", "TypeScript", "REST APIs", "Form Validation"],
-      category: "web",
-      image: "",
-      liveUrl: "https://activation.elnkdev.com/activate",
-    },
-    {
       title: "EarthLink.net - Internet Service Provider",
-      description: "Designed and deployed adaptive, mobile-first UI layouts, improving page load time by 20% and enhancing user retention. Incorporated headless WordPress CMS with GraphQL, reducing API response time by 30%. Built scalable React components achieving 98% cross-browser compatibility.",
+      description:
+        "Designed and deployed adaptive, mobile-first UI layouts, improving page load time by 20% and enhancing user retention. Incorporated headless WordPress CMS with GraphQL, reducing API response time by 30%. Built scalable React components achieving 98% cross-browser compatibility.",
       tech: ["React.js", "Next.js", "GraphQL", "WordPress CMS", "Tailwind CSS"],
       category: "web",
       image: "",
       liveUrl: "https://earthlink.net",
     },
     {
+      title: "DMLearning - Tech Learning & Internship Platform",
+      description:
+        "Built the frontend of DMLearning, an ed-tech platform offering job-ready tech courses, certifications, bootcamps and internships to 5,000+ enrolled students. Developed responsive, SEO-friendly pages in Next.js, including course listings, program pages, enquiry forms, testimonial sliders and campus collaboration sections.",
+      tech: ["React.js", "Next.js", "Node.js", "postgreSQL", "Tailwind CSS"],
+      category: "web",
+      image: "",
+      liveUrl: "https://learning.digimantra.com/",
+    },
+
+    {
+      title: "VisionWay - VisionApply",
+      description:
+        "Developed the Angular frontend for the VisionWay application, covering responsive UI, forms and API integration with a Next.js backend.",
+      tech: ["Angular", "TypeScript", "Nest.js", "REST APIs"],
+      category: "web",
+      image: "",
+      liveUrl: "https://visionway.app.visionapply.com/",
+    },
+
+    {
       title: "Portal Web - News & Media Portal",
-      description: "Built a real-time content delivery system using React Query, cutting content update latency by 40%. Implemented custom notification and reminder modules to increase user engagement and revisit rate.",
+      description:
+        "Built a real-time content delivery system using React Query, cutting content update latency by 40%. Implemented custom notification and reminder modules to increase user engagement and revisit rate.",
       tech: ["React.js", "React Query", "TypeScript", "Real-time Updates"],
       category: "web",
       image: "",
-      liveUrl: "https://portalweb.com",
+      liveUrl: "https://my.earthlink.net/",
+    },
+    {
+      title: "Skylane",
+      description:
+        "Built and shipped user-facing features for the Skylane web application, focusing on clean, reusable UI components and smooth integration with backend APIs.",
+      tech: ["WordPress", "Elementor", "PHP", "MySQL"],
+      category: "web",
+      image: "",
+      liveUrl: "https://skylanelogistics.com/",
+    },
+    {
+      title: "Agent Console - EarthLink",
+      description:
+        "Developed a high-performance internal portal for 500+ support agents, improving task efficiency by 30% through modular UI and state optimization. Connected backend microservices (NestJS, Prisma) with the frontend React modules, enabling seamless data flow and reducing API latency by 25%. Led peer code reviews, fostering a collaborative environment and mentoring junior developers.",
+      tech: ["React.js", "NestJS", "Prisma", "TypeScript", "Microservices"],
+      category: "dashboard",
+      image: "",
+      liveUrl: "https://ac.earthlink.com/",
     },
   ];
 
-  const filteredProjects = filter === "all" 
-    ? projects 
-    : projects.filter(p => p.category === filter);
+  const filteredProjects =
+    filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <div className="min-h-screen pt-24 pb-12">
@@ -62,21 +85,25 @@ const Projects = () => {
           transition={{ delay: 0.2 }}
           className="flex justify-center mb-12"
         >
-          <Tabs value={filter} onValueChange={setFilter} className="w-full max-w-md">
+          <Tabs
+            value={filter}
+            onValueChange={setFilter}
+            className="w-full max-w-md"
+          >
             <TabsList className="grid w-full grid-cols-3 bg-card/60 backdrop-blur-glass border border-border">
-              <TabsTrigger 
+              <TabsTrigger
                 value="all"
                 className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
               >
                 All
               </TabsTrigger>
-              <TabsTrigger 
+              <TabsTrigger
                 value="web"
                 className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
               >
                 Web
               </TabsTrigger>
-              <TabsTrigger 
+              <TabsTrigger
                 value="dashboard"
                 className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
               >
@@ -86,7 +113,7 @@ const Projects = () => {
           </Tabs>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
@@ -101,7 +128,9 @@ const Projects = () => {
             animate={{ opacity: 1 }}
             className="text-center py-20"
           >
-            <p className="text-muted-foreground text-lg">No projects found in this category.</p>
+            <p className="text-muted-foreground text-lg">
+              No projects found in this category.
+            </p>
           </motion.div>
         )}
       </div>
